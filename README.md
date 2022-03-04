@@ -1,3 +1,4 @@
 # Códigos testes para brincar
 Aprendendo Angular e Git
-Merge funcionou, conflitos resolvidos
+\nMerge funcionou, conflitos resolvidos
+\nDeletei a branch teste
