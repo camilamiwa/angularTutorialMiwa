@@ -1,2 +1,2 @@
 # angularTutorialMiwa
-Aprendendo Angular
+Aprendendo Angular e Git
