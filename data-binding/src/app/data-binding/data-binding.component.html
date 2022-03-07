@@ -71,7 +71,53 @@
         </div>
     </article>
 
-    <article>
-        <p>Fonte: https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G</p>
-    </article>
 </section>
+
+
+<section class="event-binding">
+
+    <article>
+        <h3>Event binding</h3>
+        <p>Uso de [colchetes] para binding de propriedades, e (parênteses) para eventos</p>
+        <p>O evento com sweet fica com (parênteses). Mas poderia escutar o evento da maneira tradicional: "on-click".</p>
+        <div>
+            <button (click)="botaoClicado()"
+            class="btn btn-primary">
+            Me clique!
+            </button>
+            <p>Gera um alert no evento (click)</p>
+    
+            <br><br>
+    
+            <input type="text"
+            (keyup)="onKeyUp($event)"
+            (keyup.enter)="salvarValor(campoInput.value)"
+            (blur)="salvarValor(campoInput.value)"
+            #campoInput 
+            />
+    
+            <p>Valor atual: {{ valorAtual }}</p>
+            <p>Valor salvo: {{ valorSalvo }}</p>
+
+            <p>Evento keyup para atualizar o valor.</p>
+            <p>Evento keyup.enter (enter pressionado) para salvar o valor.</p>
+            <p>Evento blur (mudança de foco, como clique fora do input) para salvar o valor.</p>
+
+            <p>$event.target foi substituído pelo #campoInput declarado ao final.</p>
+    
+            <br>
+
+            <span
+            (mouseover)="onMouseOverOut()"
+            (mouseout)="onMouseOverOut()"
+            [class.highlight]="isMouseOver"
+            >
+            Passe o mouse sobre mim
+            </span>
+        </div>
+    </article> 
+</section>
+
+<footer>
+    <p>Fonte: https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G</p>
+</footer>

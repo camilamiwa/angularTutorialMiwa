@@ -13,12 +13,32 @@ export class DataBindingComponent implements OnInit {
   urlImagemAerea = 'https://upload.wikimedia.org/wikipedia/commons/f/fe/Panorama_de_Macei%C3%B3.jpg';
   urlImagemFrontal = 'https://s3q7j5f5.stackpathcdn.com/wp-content/uploads/2021/07/maceio-cidade-brasil.jpg';
 
+  valorAtual: string = '';
+  valorSalvo: string = '';
+
+  isMouseOver: boolean = false;
+
   getValor(){
     return 1;
   }
 
   getCurtirCurso(){
     return true;
+  }
+
+  botaoClicado(){
+    alert('Botão clicado!');
+  }
+
+  onKeyUp(e: KeyboardEvent){
+    this.valorAtual = (<HTMLInputElement>e.target).value;
+  }
+  salvarValor(valor: string){
+    this.valorSalvo = valor;
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
   }
 
   constructor() { }
