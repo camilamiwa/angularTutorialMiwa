@@ -1,26 +1,77 @@
 <section class="property-binding">
 
     <article>
-      <h3>Interpolation / Interpolação</h3>
-      <p>String renderizada com interpolação: {{ url }}</p>
-      <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
-      <p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor()}}</p>
-      <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+        <h2>Aula 09</h2>
+        <h3>Interpolation / Interpolação</h3>
+        <p>String renderizada com interpolação: {{ url }}</p>
+        <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+        <p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor()}}</p>
+        <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
     </article>
 
     <article>
         <h3>Property Binding</h3>
         
+        <h5>Imagens de Maceió segundo o Google</h5> 
         <!-- Aqui ainda interpolação -->
-        <img src="{{ urlImagemMain }}">
+        <img src="{{ urlImagemMain }}" width="64" height="43">
         
-        <br/>
         <!-- Aqui o property binding com o sweet code -->
-        <img [src]="urlImagemAerea">
+        <img [src]="urlImagemAerea" width="101" height="72">
         
-        <br/>
         <!-- Property binding com o template default -->
-        <img bind-src="urlImagemFrontal">
+        <img bind-src="urlImagemFrontal" width="73" height="45">
     </article>
 
+    <article>
+        <h2>Aula 10</h2>
+        <h3>Class e Style Binding</h3>
+        <p>Notes: class binding is a property binding variation.</p>
+        <div>
+            Selecione uma classe:
+            <select #classe (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">Info</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+            <br><br>
+        
+            <div class="alert {{ classe.value }}" role="alert">
+                Texto colorido conforme valor do combobox.
+            </div>
+        
+            <div class="alert" role="alert"
+                [class.alert-success]="classe.value == 'alert-success'"
+                [class.alert-info]="classe.value == 'alert-info'">
+                Uma pequena mudança, esse deve destacar quando sucesso ou info
+                <!-- Sucesso -->
+            </div>
+        
+            <div class="alert" role="alert"
+            [class.alert-info]="classe.value == 'alert-info'">
+                Info
+            </div>
+        
+            <div class="alert" role="alert"
+            [class.alert-warning]="classe.value == 'alert-warning'">
+                Alerta
+            </div>
+        
+            <div class="alert" role="alert"
+            [class.alert-danger]="classe.value == 'alert-danger'">
+                Obs.: ao selecionar "Erro", mais um texto aparece. Uso de style binding.
+            </div>
+            
+            <div class="alert alert-danger" role="alert"
+            [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+                Somente se erro.
+            </div>
+
+        </div>
+    </article>
+
+    <article>
+        <p>Fonte: https://www.youtube.com/playlist?list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G</p>
+    </article>
 </section>
