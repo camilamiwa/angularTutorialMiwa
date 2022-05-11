@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CicloComponent } from './ciclo.component';
+import { MeuPrimeiroComCliComponent } from './meu-primeiro-com-cli.component';
 
-describe('CicloComponent', () => {
-  let component: CicloComponent;
-  let fixture: ComponentFixture<CicloComponent>;
+describe('MeuPrimeiroComCliComponent', () => {
+  let component: MeuPrimeiroComCliComponent;
+  let fixture: ComponentFixture<MeuPrimeiroComCliComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CicloComponent ]
+      declarations: [ MeuPrimeiroComCliComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CicloComponent);
+    fixture = TestBed.createComponent(MeuPrimeiroComCliComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

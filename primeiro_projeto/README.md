@@ -1,3 +1,8 @@
+# Notes to me
+
+On component.ts, the selector value defines the tag value.
+Suppose you want to add meu-primeiro-component inside app.html, then you must add the tag `<meu-primeiro-component></meu-primeiro-component>`.
+
 # PrimeiroProjeto
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
